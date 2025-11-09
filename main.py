@@ -1,0 +1,17 @@
+from src.Assignment_4 import logger
+from src.Assignment_4.pipeline.Data_ingestion_stage import DataIngestionPipeline
+#from src.Assignment_3.pipeline.Data_transformation_stage import DataTransformationPipeline
+#from src.Assignment_3.pipeline.Data_validation_stage import DataValidationPipeline
+#from src.Assignment_3.pipeline.Model_evaluation_stage import ModelEvaluationPipeline
+#from src.Assignment_3.pipeline.Model_trainer_stage import ModelTrainerPipeline
+
+STAGE_NAME = "<<<<<<<Data Ingestion stage>>>>>>>>>"
+
+try:
+    logger.info(f">>>>>> stage {STAGE_NAME} started <<<<<<")
+    obj = DataIngestionPipeline()
+    obj.main()
+    logger.info(f">>>>>> stage {STAGE_NAME} completed <<<<<<\n\nx==========x")
+except Exception as e:
+    logger.exception(e)
+    raise e
